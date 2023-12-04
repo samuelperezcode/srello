@@ -1,11 +1,16 @@
 import { Button } from '@/components/ui/button'
 import {Medal} from 'lucide-react'
 import Link from 'next/link'
+import { font } from '@/lib/fonts'
+import { cn } from '@/lib/utils'
 
 export default function MarketingPage() {
   return (
     <section className="flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
+      <div className={cn(
+        "flex flex-col items-center justify-center",
+        font.className
+      )}>
         <div className='flex mb-4 items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase'>
           <Medal className='w-6 h-6 mr-2' />
           No.1 Task Managment
