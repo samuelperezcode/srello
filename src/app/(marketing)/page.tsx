@@ -1,4 +1,6 @@
+import { Button } from '@/components/ui/button'
 import {Medal} from 'lucide-react'
+import Link from 'next/link'
 
 export default function MarketingPage() {
   return (
@@ -17,6 +19,11 @@ export default function MarketingPage() {
           Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique—accomplish it all with Srello.
         </p>
       </article>
+      <Button variant={'default'} className='mt-6' size={'lg'} asChild>
+        <Link href='/sign-up'>
+          Get Srello for free
+        </Link>
+      </Button>
     </section>
   )
 }
