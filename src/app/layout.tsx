@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
 import './globals.css'
-
+import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'Srello',
-  description: 'Best Tasks magament app for teams to move as fast as possible.',
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: [{
+    url: '/images/logo.svg',
+    href: '/images/logo.svg',
+  }]
 }
 
 export default function RootLayout({
@@ -13,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
   )
 }
