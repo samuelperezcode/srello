@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import {Medal} from 'lucide-react'
 import Link from 'next/link'
-import { font } from '@/lib/fonts'
+import { headingFont, textFont } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 
 export default function MarketingPage() {
@@ -9,7 +9,7 @@ export default function MarketingPage() {
     <section className="flex flex-col items-center justify-center">
       <div className={cn(
         "flex flex-col items-center justify-center",
-        font.className
+        headingFont.className
       )}>
         <div className='flex mb-4 items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase'>
           <Medal className='w-6 h-6 mr-2' />
@@ -20,7 +20,10 @@ export default function MarketingPage() {
         <div className='text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-4 py-2 rounded-[8px] pb-4 w-fit'>work forward</div>
       </div>
       <article>
-        <p className='text-sm md:text-xl text-neutral-400 max-w-xs md:max-w-2xl mt-4 text-center mx-auto'>
+        <p className={cn(
+          'text-sm md:text-xl text-neutral-400 max-w-xs md:max-w-2xl mt-4 text-center mx-auto',
+          textFont.className
+        )}>
           Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique—accomplish it all with Srello.
         </p>
       </article>
