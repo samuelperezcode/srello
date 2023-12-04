@@ -11,10 +11,10 @@ export function Navbar() {
         <div className="hidden md:flex">
           <Logo />
         </div>
-        <Button size={'sm'} className="rounded-sm hidden md:block px-2 py-1 h-auto">
+        <Button variant={"primary"} size={'sm'} className="rounded-sm hidden md:block px-2 py-1 h-auto">
           Create
-        </Button>
-        <Button size={'sm'} className="block md:hidden rounded-sm">
+        </Button >
+        <Button variant={"primary"} size={'sm'} className="block md:hidden rounded-sm">
           <Plus className="h-4 w-4" />
         </Button>
       </nav>
